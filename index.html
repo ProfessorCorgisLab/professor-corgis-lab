@@ -30,7 +30,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; font-weight: 500; }
 
     /* NOISE */
     body::before {
@@ -57,9 +57,9 @@
 
     @keyframes molFloat {
       0%   { transform: translateY(100vh) rotate(0deg);   opacity: 0; }
-      5%   { opacity: 1; }
-      90%  { opacity: 0.7; }
-      100% { transform: translateY(-120px) rotate(360deg); opacity: 0; }
+      8%   { opacity: 0.85; }
+      88%  { opacity: 0.75; }
+      100% { transform: translateY(-160px) rotate(360deg); opacity: 0; }
     }
 
     /* NAV */
@@ -117,7 +117,7 @@
       text-align: center; padding: 8rem 2rem 4rem;
     }
     .hero-inner { max-width: 900px; }
-    .hero-logo { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; margin: 0 auto 2rem; display: block; border: 2px solid var(--border-glow); box-shadow: 0 0 60px var(--purple-glow), 0 0 120px rgba(107,63,160,0.15); animation: float 6s ease-in-out infinite; }
+    .hero-logo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; margin: 0 auto 2rem; display: block; border: 2px solid var(--border-glow); box-shadow: 0 0 60px var(--purple-glow), 0 0 120px rgba(107,63,160,0.15); animation: float 6s ease-in-out infinite; }
     @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
     .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue-light); background: rgba(46,134,171,0.1); border: 1px solid rgba(46,134,171,0.25); padding: 0.35rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; animation: fadeUp 0.6s ease both; }
     .hero-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.6rem, 6.5vw, 5rem); line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 1.25rem; animation: fadeUp 0.6s 0.1s ease both; }
@@ -147,7 +147,7 @@
     #products { background: var(--bg2); }
     .products-header { text-align: center; margin-bottom: 3.5rem; }
     .products-header .section-sub { margin: 0 auto; }
-    .cat-header { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); padding: 0.5rem 0 1.25rem; display: flex; align-items: center; gap: 1rem; }
+    .cat-header { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 0.5rem 0 1.25rem; display: flex; align-items: center; gap: 1rem; }
     .cat-header::after { content: ''; flex: 1; height: 1px; background: var(--border); }
     .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem; }
 
@@ -168,13 +168,13 @@
     .product-image-wrap svg { width: 80%; max-width: 200px; height: auto; }
 
     .product-body { padding: 1.4rem; flex: 1; display: flex; flex-direction: column; }
-    .sold-out-tag { position: absolute; top: 0.75rem; right: 0.75rem; font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(224,92,138,0.18); color: var(--pink); border: 1px solid rgba(224,92,138,0.3); padding: 0.2rem 0.55rem; border-radius: 4px; z-index: 2; }
-    .product-category { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 0.35rem; }
-    .product-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem; }
-    .product-sku { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--text-dim); margin-bottom: 0.65rem; }
-    .product-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 1rem; flex: 1; }
+    .sold-out-tag { position: absolute; top: 0.75rem; right: 0.75rem; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(224,92,138,0.18); color: var(--pink); border: 1px solid rgba(224,92,138,0.3); padding: 0.2rem 0.55rem; border-radius: 4px; z-index: 2; font-weight: 700; }
+    .product-category { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 0.3rem; }
+    .product-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 0.25rem; color: var(--text); }
+    .product-sku { font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 600; color: var(--purple-light); margin-bottom: 0.65rem; letter-spacing: 0.06em; }
+    .product-desc { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); line-height: 1.55; margin-bottom: 1rem; flex: 1; }
     .product-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 0.9rem; margin-top: auto; }
-    .product-price { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.35rem; }
+    .product-price { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.45rem; color: var(--text); }
     .tag { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.07em; padding: 0.18rem 0.5rem; border-radius: 4px; background: var(--surface2); color: var(--text-muted); border: 1px solid var(--border); }
     .tag.purple { background: rgba(107,63,160,0.15); color: var(--purple-light); border-color: rgba(107,63,160,0.3); }
     .tag.blue { background: rgba(46,134,171,0.15); color: var(--blue-light); border-color: rgba(46,134,171,0.3); }
@@ -451,7 +451,7 @@
     </div>
     <div class="hero-stats">
       <div class="stat-item"><span class="stat-num">$<span class="a">10</span></span><span class="stat-label">Flat-Rate Shipping</span></div>
-      <div class="stat-item"><span class="stat-num">$<span class="a">120</span></span><span class="stat-label">Free Shipping Over</span></div>
+      <div class="stat-item"><span class="stat-num">$<span class="a">150</span></span><span class="stat-label">Free Shipping Over</span></div>
       <div class="stat-item"><span class="stat-num">M–<span class="a">F</span></span><span class="stat-label">10am–7pm CST</span></div>
       <div class="stat-item"><span class="stat-num">100<span class="a">%</span></span><span class="stat-label">Research Use Only</span></div>
     </div>
@@ -463,36 +463,34 @@
   <div class="container">
     <div class="products-header reveal">
       <span class="section-label">// The Catalog</span>
-      <h2 class="section-title">Research Materials & Equipment</h2>
-      <p class="section-sub">All products are intended strictly for laboratory research purposes only — not for human or veterinary use or consumption.</p>
+      <h2 class="section-title">Research Materials &amp; Equipment</h2>
+      <p class="section-sub">All products are intended strictly for laboratory research purposes only — not for human or veterinary use or consumption.<br/><strong style="color:var(--purple-light);">🧪 All Experiment Files are lyophilized powder for safe transportation.</strong></p>
     </div>
 
+    <!-- ═══ THE EXPERIMENT FILES ═══ -->
+    <div class="cat-header reveal">🧪 &nbsp;The Experiment Files — Peptides</div>
+
     <!-- TWO PAWS PROTOCOL -->
-    <div class="cat-header reveal">🧬 &nbsp;Two Paws Protocol — GLP-2 Tirzepatide</div>
+    <div class="cat-header reveal" style="font-size:0.72rem; font-family:'DM Mono',monospace; font-weight:600; color:var(--blue-light); padding-top:0; padding-bottom:0.75rem; margin-top:-0.5rem;">Two Paws Protocol — GLP-2 Tirzepatide</div>
     <div class="product-grid">
 
       <div class="product-card reveal">
         <div class="product-image-wrap">
           <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="vial1a" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#8B5FC0;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#4EAACB;stop-opacity:0.8"/></linearGradient>
-              <filter id="glow1"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-            </defs>
+            <defs><linearGradient id="vial1a" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#8B5FC0;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#4EAACB;stop-opacity:0.8"/></linearGradient>
+            <filter id="glow1"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
             <rect x="87" y="20" width="26" height="8" rx="3" fill="#8B5FC0" opacity="0.8"/>
             <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#8B5FC0" stroke-width="1.5" opacity="0.5"/>
             <rect x="83.5" y="55" width="33" height="47" rx="5" fill="url(#vial1a)" filter="url(#glow1)"/>
             <text x="100" y="85" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold" opacity="0.9">T-020</text>
             <text x="100" y="96" text-anchor="middle" fill="rgba(240,234,248,0.7)" font-family="monospace" font-size="7">20mg</text>
-            <circle cx="130" cy="45" r="5" fill="#8B5FC0" opacity="0.3" filter="url(#glow1)"/>
-            <circle cx="145" cy="70" r="3" fill="#4EAACB" opacity="0.25"/>
-            <circle cx="55" cy="60" r="4" fill="#E05C8A" opacity="0.2"/>
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">Two Paws Protocol / GLP-2</div>
-          <div class="product-name">Tirzz 20mg</div>
+          <div class="product-category">Two Paws Protocol</div>
+          <div class="product-name">Tirzepatide 20mg</div>
           <div class="product-sku">Sample #T-020</div>
-          <div class="product-desc">Tirzepatide analog for research. 20mg lyophilized vial. Standard dose option for GLP-2 research protocols.</div>
+          <div class="product-desc">GLP-2 Tirzepatide analog. 20mg lyophilized powder vial. Standard dose for research protocols.</div>
           <div class="product-footer">
             <span class="product-price">$60</span>
             <div class="tag-group"><span class="tag purple">20mg</span><span class="tag blue">Lyophilized</span></div>
@@ -512,10 +510,10 @@
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">Two Paws Protocol / GLP-2</div>
-          <div class="product-name">Tirzz 30mg</div>
+          <div class="product-category">Two Paws Protocol</div>
+          <div class="product-name">Tirzepatide 30mg</div>
           <div class="product-sku">Sample #T-030</div>
-          <div class="product-desc">Tirzepatide analog for research. 30mg lyophilized vial. Higher-dose option for extended GLP-2 research.</div>
+          <div class="product-desc">GLP-2 Tirzepatide analog. 30mg lyophilized powder vial. Higher-dose option for extended protocols.</div>
           <div class="product-footer">
             <span class="product-price">$70</span>
             <div class="tag-group"><span class="tag purple">30mg</span><span class="tag blue">Lyophilized</span></div>
@@ -536,10 +534,10 @@
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">Two Paws Protocol / GLP-2</div>
-          <div class="product-name">Tirzz 40mg</div>
+          <div class="product-category">Two Paws Protocol</div>
+          <div class="product-name">Tirzepatide 40mg</div>
           <div class="product-sku">Sample #T-040</div>
-          <div class="product-desc">Tirzepatide analog for research. 40mg lyophilized vial. Currently out of stock — restocking soon.</div>
+          <div class="product-desc">GLP-2 Tirzepatide analog. 40mg lyophilized powder vial. Currently restocking.</div>
           <div class="product-footer">
             <span class="product-price">$85</span>
             <div class="tag-group"><span class="tag purple">40mg</span><span class="tag">Sold Out</span></div>
@@ -555,17 +553,17 @@
             <rect x="87" y="20" width="26" height="8" rx="3" fill="#3a2260" opacity="0.6"/>
             <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#3a2260" stroke-width="1.5" opacity="0.4"/>
             <rect x="83.5" y="30" width="33" height="72" rx="5" fill="url(#vial1d)"/>
-            <text x="100" y="70" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold" opacity="0.7">T0-60</text>
+            <text x="100" y="70" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold" opacity="0.7">T-060</text>
             <text x="100" y="81" text-anchor="middle" fill="rgba(240,234,248,0.5)" font-family="monospace" font-size="7">60mg</text>
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">Two Paws Protocol / GLP-2</div>
-          <div class="product-name">Tirzz 60mg</div>
-          <div class="product-sku">Sample #T0-60</div>
-          <div class="product-desc">Tirzepatide analog for research. 60mg lyophilized vial. Max-dose option — restocking in progress.</div>
+          <div class="product-category">Two Paws Protocol</div>
+          <div class="product-name">Tirzepatide 60mg</div>
+          <div class="product-sku">Sample #T-060</div>
+          <div class="product-desc">GLP-2 Tirzepatide analog. 60mg lyophilized powder vial. Max-dose option — restocking in progress.</div>
           <div class="product-footer">
-            <span class="product-price">$110</span>
+            <span class="product-price">$120</span>
             <div class="tag-group"><span class="tag purple">60mg</span><span class="tag">Sold Out</span></div>
           </div>
         </div>
@@ -574,7 +572,7 @@
     </div>
 
     <!-- THE TRIFECTA -->
-    <div class="cat-header reveal">🧬 &nbsp;The Trifecta — GLP-3 Retatrutide</div>
+    <div class="cat-header reveal" style="font-size:0.72rem; font-family:'DM Mono',monospace; font-weight:600; color:var(--pink-light); padding-top:0; padding-bottom:0.75rem; margin-top:-0.5rem;">The Trifecta — GLP-3 Retatrutide</div>
     <div class="product-grid">
 
       <div class="product-card reveal">
@@ -589,13 +587,13 @@
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">The Trifecta / GLP-3</div>
-          <div class="product-name">Retaa 10mg</div>
+          <div class="product-category">The Trifecta</div>
+          <div class="product-name">Retatrutide 10mg</div>
           <div class="product-sku">Sample #R-010</div>
-          <div class="product-desc">Retatrutide analog for research. 10mg lyophilized vial. Entry-level option for triple agonist GLP-3 research.</div>
+          <div class="product-desc">GLP-3 Retatrutide analog. 10mg lyophilized powder vial.</div>
           <div class="product-footer">
-            <span class="product-price">$75</span>
-            <div class="tag-group"><span class="tag pink">10mg</span><span class="tag blue">GLP-3</span></div>
+            <span class="product-price">$70</span>
+            <div class="tag-group"><span class="tag pink">10mg</span><span class="tag blue">Lyophilized</span></div>
           </div>
         </div>
       </div>
@@ -603,22 +601,22 @@
       <div class="product-card reveal">
         <div class="product-image-wrap">
           <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="vial2b" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#c04070;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#E05C8A;stop-opacity:0.9"/></linearGradient></defs>
-            <rect x="87" y="20" width="26" height="8" rx="3" fill="#c04070" opacity="0.8"/>
-            <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#c04070" stroke-width="1.5" opacity="0.5"/>
+            <defs><linearGradient id="vial2b" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#c0447a;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#E05C8A;stop-opacity:0.9"/></linearGradient></defs>
+            <rect x="87" y="20" width="26" height="8" rx="3" fill="#c0447a" opacity="0.8"/>
+            <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#c0447a" stroke-width="1.5" opacity="0.5"/>
             <rect x="83.5" y="48" width="33" height="54" rx="5" fill="url(#vial2b)" filter="url(#glow1)"/>
-            <text x="100" y="80" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold" opacity="0.9">R-020</text>
-            <text x="100" y="91" text-anchor="middle" fill="rgba(240,234,248,0.7)" font-family="monospace" font-size="7">20mg</text>
+            <text x="100" y="82" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold" opacity="0.9">R-020</text>
+            <text x="100" y="93" text-anchor="middle" fill="rgba(240,234,248,0.7)" font-family="monospace" font-size="7">20mg</text>
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">The Trifecta / GLP-3</div>
-          <div class="product-name">Retaa 20mg</div>
+          <div class="product-category">The Trifecta</div>
+          <div class="product-name">Retatrutide 20mg</div>
           <div class="product-sku">Sample #R-020</div>
-          <div class="product-desc">Retatrutide analog for research. 20mg lyophilized vial. Standard dose for advanced GLP-3 research protocols.</div>
+          <div class="product-desc">GLP-3 Retatrutide analog. 20mg lyophilized powder vial.</div>
           <div class="product-footer">
-            <span class="product-price">$90</span>
-            <div class="tag-group"><span class="tag pink">20mg</span><span class="tag blue">GLP-3</span></div>
+            <span class="product-price">$95</span>
+            <div class="tag-group"><span class="tag pink">20mg</span><span class="tag blue">Lyophilized</span></div>
           </div>
         </div>
       </div>
@@ -627,56 +625,113 @@
         <div class="sold-out-tag">Sold Out</div>
         <div class="product-image-wrap">
           <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="vial2c" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#8a2f50;stop-opacity:0.4"/><stop offset="100%" style="stop-color:#b04060;stop-opacity:0.6"/></linearGradient></defs>
-            <rect x="87" y="20" width="26" height="8" rx="3" fill="#8a2f50" opacity="0.5"/>
-            <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#8a2f50" stroke-width="1.5" opacity="0.35"/>
-            <rect x="83.5" y="36" width="33" height="66" rx="5" fill="url(#vial2c)"/>
-            <text x="100" y="74" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold" opacity="0.6">R-030</text>
-            <text x="100" y="85" text-anchor="middle" fill="rgba(240,234,248,0.4)" font-family="monospace" font-size="7">30mg</text>
+            <defs><linearGradient id="vial2c" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#7a2a50;stop-opacity:0.5"/><stop offset="100%" style="stop-color:#b03060;stop-opacity:0.7"/></linearGradient></defs>
+            <rect x="87" y="20" width="26" height="8" rx="3" fill="#7a2a50" opacity="0.6"/>
+            <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#7a2a50" stroke-width="1.5" opacity="0.4"/>
+            <rect x="83.5" y="38" width="33" height="64" rx="5" fill="url(#vial2c)"/>
+            <text x="100" y="74" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold" opacity="0.7">R-030</text>
+            <text x="100" y="85" text-anchor="middle" fill="rgba(240,234,248,0.5)" font-family="monospace" font-size="7">30mg</text>
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">The Trifecta / GLP-3</div>
-          <div class="product-name">Retaa 30mg</div>
+          <div class="product-category">The Trifecta</div>
+          <div class="product-name">Retatrutide 30mg</div>
           <div class="product-sku">Sample #R-030</div>
-          <div class="product-desc">Retatrutide analog for research. 30mg lyophilized vial. High-dose option — currently out of stock.</div>
+          <div class="product-desc">GLP-3 Retatrutide analog. 30mg lyophilized powder vial. Restocking in progress.</div>
           <div class="product-footer">
-            <span class="product-price">$125</span>
+            <span class="product-price">$120</span>
             <div class="tag-group"><span class="tag pink">30mg</span><span class="tag">Sold Out</span></div>
           </div>
         </div>
       </div>
 
-      <div class="coming-soon-card reveal">
-        <div class="cs-icon">🔬</div>
-        <p>Additional Compounds & Blends<br/>Coming Soon</p>
-      </div>
-
     </div>
 
-    <!-- BAC WATER -->
-    <div class="cat-header reveal">💧 &nbsp;The Dilution Solution — Bacteriostatic Water</div>
+    <!-- THE SPARK SEQUENCE -->
+    <div class="cat-header reveal" style="font-size:0.72rem; font-family:'DM Mono',monospace; font-weight:600; color:var(--blue-light); padding-top:0; padding-bottom:0.75rem; margin-top:-0.5rem;">The Spark Sequence — MOTS-C</div>
     <div class="product-grid">
 
       <div class="product-card reveal">
         <div class="product-image-wrap">
           <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="bw1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#2E86AB;stop-opacity:0.3"/><stop offset="100%" style="stop-color:#4EAACB;stop-opacity:0.7"/></linearGradient></defs>
-            <rect x="90" y="20" width="20" height="8" rx="3" fill="#2E86AB" opacity="0.7"/>
-            <rect x="84" y="28" width="32" height="70" rx="8" fill="none" stroke="#2E86AB" stroke-width="1.5" opacity="0.5"/>
-            <rect x="85.5" y="60" width="29" height="37" rx="7" fill="url(#bw1)" filter="url(#glow1)"/>
-            <text x="100" y="82" text-anchor="middle" fill="white" font-family="monospace" font-size="8" font-weight="bold" opacity="0.9">BW-003</text>
-            <text x="100" y="92" text-anchor="middle" fill="rgba(240,234,248,0.7)" font-family="monospace" font-size="7">3ml</text>
+            <defs><linearGradient id="vialMS" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#2E86AB;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#4EAACB;stop-opacity:0.9"/></linearGradient></defs>
+            <rect x="87" y="20" width="26" height="8" rx="3" fill="#2E86AB" opacity="0.8"/>
+            <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#2E86AB" stroke-width="1.5" opacity="0.5"/>
+            <rect x="83.5" y="58" width="33" height="44" rx="5" fill="url(#vialMS)" filter="url(#glow1)"/>
+            <text x="100" y="86" text-anchor="middle" fill="white" font-family="monospace" font-size="8" font-weight="bold" opacity="0.9">MS-010</text>
+            <text x="100" y="97" text-anchor="middle" fill="rgba(240,234,248,0.7)" font-family="monospace" font-size="7">10mg</text>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-category">The Spark Sequence</div>
+          <div class="product-name">MOTS-C 10mg</div>
+          <div class="product-sku">Sample #MS-010</div>
+          <div class="product-desc">MOTS-C mitochondrial peptide. 10mg lyophilized powder vial.</div>
+          <div class="product-footer">
+            <span class="product-price">$45</span>
+            <div class="tag-group"><span class="tag blue">10mg</span><span class="tag blue">Lyophilized</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- THE VOLTAGE VIAL -->
+    <div class="cat-header reveal" style="font-size:0.72rem; font-family:'DM Mono',monospace; font-weight:600; color:var(--text-dim); padding-top:0; padding-bottom:0.75rem; margin-top:-0.5rem;">The Voltage Vial — B-12</div>
+    <div class="product-grid">
+
+      <div class="product-card sold-out reveal">
+        <div class="sold-out-tag">Sold Out</div>
+        <div class="product-image-wrap">
+          <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="vialB12" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0.4"/><stop offset="100%" style="stop-color:#ff8c42;stop-opacity:0.6"/></linearGradient></defs>
+            <rect x="87" y="20" width="26" height="8" rx="3" fill="#cc4400" opacity="0.6"/>
+            <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#cc4400" stroke-width="1.5" opacity="0.4"/>
+            <rect x="83.5" y="42" width="33" height="60" rx="5" fill="url(#vialB12)"/>
+            <text x="100" y="76" text-anchor="middle" fill="white" font-family="monospace" font-size="8" font-weight="bold" opacity="0.7">B12-010</text>
+            <text x="100" y="87" text-anchor="middle" fill="rgba(240,234,248,0.5)" font-family="monospace" font-size="7">10mg</text>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-category">The Voltage Vial</div>
+          <div class="product-name">B-12 10mg Lyophilized</div>
+          <div class="product-sku">Sample #B12-010</div>
+          <div class="product-desc">Vitamin B-12. 10mg lyophilized powder vial. Restocking in progress.</div>
+          <div class="product-footer">
+            <span class="product-price">$15</span>
+            <div class="tag-group"><span class="tag">10mg</span><span class="tag">Sold Out</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ THE SUPPLY LINE ═══ -->
+    <div class="cat-header reveal" style="margin-top:1.5rem;">🔧 &nbsp;The Supply Line — Equipment &amp; Supplies</div>
+
+    <!-- DILUTION SOLUTION -->
+    <div class="cat-header reveal" style="font-size:0.72rem; font-family:'DM Mono',monospace; font-weight:600; color:var(--blue-light); padding-top:0; padding-bottom:0.75rem; margin-top:-0.5rem;">The Dilution Solution — BAC Water</div>
+    <div class="product-grid">
+
+      <div class="product-card reveal">
+        <div class="product-image-wrap">
+          <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="bac1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#2E86AB;stop-opacity:0.3"/><stop offset="100%" style="stop-color:#4EAACB;stop-opacity:0.6"/></linearGradient></defs>
+            <rect x="87" y="20" width="26" height="8" rx="3" fill="#2E86AB" opacity="0.7"/>
+            <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#2E86AB" stroke-width="1.5" opacity="0.5"/>
+            <rect x="83.5" y="72" width="33" height="30" rx="5" fill="url(#bac1)" filter="url(#glow1)"/>
+            <text x="100" y="92" text-anchor="middle" fill="white" font-family="monospace" font-size="8" font-weight="bold" opacity="0.9">BW-003</text>
+            <text x="100" y="103" text-anchor="middle" fill="rgba(240,234,248,0.7)" font-family="monospace" font-size="7">3ml</text>
           </svg>
         </div>
         <div class="product-body">
           <div class="product-category">The Dilution Solution</div>
           <div class="product-name">BAC Water 3ml</div>
           <div class="product-sku">Sample #BW-003</div>
-          <div class="product-desc">Bacteriostatic water for peptide reconstitution. 3ml sterile vial, 0.9% benzyl alcohol preserved.</div>
+          <div class="product-desc">Bacteriostatic water for reconstitution. 3ml vial.</div>
           <div class="product-footer">
             <span class="product-price">$8</span>
-            <div class="tag-group"><span class="tag blue">3ml</span><span class="tag">Sterile</span></div>
+            <div class="tag-group"><span class="tag blue">3ml</span></div>
           </div>
         </div>
       </div>
@@ -685,22 +740,22 @@
         <div class="sold-out-tag">Sold Out</div>
         <div class="product-image-wrap">
           <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="bw2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#1e5e7a;stop-opacity:0.3"/><stop offset="100%" style="stop-color:#2E86AB;stop-opacity:0.5"/></linearGradient></defs>
-            <rect x="86" y="20" width="28" height="8" rx="3" fill="#1e5e7a" opacity="0.5"/>
-            <rect x="80" y="28" width="40" height="70" rx="8" fill="none" stroke="#1e5e7a" stroke-width="1.5" opacity="0.35"/>
-            <rect x="81.5" y="40" width="37" height="57" rx="7" fill="url(#bw2)"/>
-            <text x="100" y="74" text-anchor="middle" fill="white" font-family="monospace" font-size="8" font-weight="bold" opacity="0.6">BW-010</text>
-            <text x="100" y="84" text-anchor="middle" fill="rgba(240,234,248,0.4)" font-family="monospace" font-size="7">10ml</text>
+            <defs><linearGradient id="bac2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#1a5070;stop-opacity:0.3"/><stop offset="100%" style="stop-color:#2E86AB;stop-opacity:0.5"/></linearGradient></defs>
+            <rect x="87" y="20" width="26" height="8" rx="3" fill="#1a5070" opacity="0.6"/>
+            <rect x="82" y="28" width="36" height="75" rx="6" fill="none" stroke="#1a5070" stroke-width="1.5" opacity="0.4"/>
+            <rect x="83.5" y="50" width="33" height="52" rx="5" fill="url(#bac2)"/>
+            <text x="100" y="80" text-anchor="middle" fill="white" font-family="monospace" font-size="8" font-weight="bold" opacity="0.7">BW-010</text>
+            <text x="100" y="91" text-anchor="middle" fill="rgba(240,234,248,0.5)" font-family="monospace" font-size="7">10ml</text>
           </svg>
         </div>
         <div class="product-body">
           <div class="product-category">The Dilution Solution</div>
           <div class="product-name">BAC Water 10ml</div>
           <div class="product-sku">Sample #BW-010</div>
-          <div class="product-desc">Bacteriostatic water for peptide reconstitution. 10ml vial for extended use — currently out of stock.</div>
+          <div class="product-desc">Bacteriostatic water for reconstitution. 10ml vial. Restocking soon.</div>
           <div class="product-footer">
             <span class="product-price">$15</span>
-            <div class="tag-group"><span class="tag blue">10ml</span><span class="tag">Sold Out</span></div>
+            <div class="tag-group"><span class="tag">10ml</span><span class="tag">Sold Out</span></div>
           </div>
         </div>
       </div>
@@ -708,33 +763,32 @@
     </div>
 
     <!-- PRECISION POINT -->
-    <div class="cat-header reveal">🔬 &nbsp;Precision Point — Lab Equipment</div>
+    <div class="cat-header reveal" style="font-size:0.72rem; font-family:'DM Mono',monospace; font-weight:600; color:var(--blue-light); padding-top:0; padding-bottom:0.75rem; margin-top:-0.5rem;">Precision Point — Syringes</div>
     <div class="product-grid">
 
       <div class="product-card reveal">
         <div class="product-image-wrap">
           <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
             <defs><linearGradient id="syr1" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#6B3FA0;stop-opacity:0.5"/><stop offset="100%" style="stop-color:#8B5FC0;stop-opacity:0.8"/></linearGradient></defs>
-            <rect x="60" y="58" width="90" height="14" rx="7" fill="url(#syr1)" filter="url(#glow1)"/>
-            <rect x="146" y="60" width="18" height="10" rx="2" fill="#8B5FC0" opacity="0.7"/>
-            <rect x="164" y="63" width="10" height="4" rx="2" fill="#6B3FA0" opacity="0.5"/>
-            <rect x="58" y="60" width="6" height="10" rx="2" fill="#8B5FC0" opacity="0.6"/>
-            <rect x="50" y="62" width="10" height="6" rx="3" fill="#6B3FA0" opacity="0.5"/>
-            <line x1="75" y1="58" x2="75" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-            <line x1="90" y1="58" x2="90" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-            <line x1="105" y1="58" x2="105" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-            <line x1="120" y1="58" x2="120" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-            <text x="100" y="95" text-anchor="middle" fill="rgba(240,234,248,0.6)" font-family="monospace" font-size="8">EQUIP #N-100 · 1.0ml</text>
+            <rect x="65" y="58" width="80" height="14" rx="7" fill="url(#syr1)" filter="url(#glow1)"/>
+            <rect x="141" y="60" width="16" height="10" rx="2" fill="#8B5FC0" opacity="0.7"/>
+            <rect x="157" y="63" width="8" height="4" rx="2" fill="#6B3FA0" opacity="0.5"/>
+            <rect x="63" y="60" width="6" height="10" rx="2" fill="#8B5FC0" opacity="0.6"/>
+            <rect x="55" y="62" width="10" height="6" rx="3" fill="#6B3FA0" opacity="0.5"/>
+            <line x1="78" y1="58" x2="78" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <line x1="93" y1="58" x2="93" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <line x1="108" y1="58" x2="108" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <text x="100" y="95" text-anchor="middle" fill="rgba(240,234,248,0.6)" font-family="monospace" font-size="8">EQUIP #N-050 · 0.5ml</text>
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">Precision Point / Equipment</div>
-          <div class="product-name">1.0ml Syringes</div>
-          <div class="product-sku">EQUIP #N-100</div>
-          <div class="product-desc">1.0ml / 100-unit insulin-style syringes. Pack of 10. Standard for reconstituted peptide measurement.</div>
+          <div class="product-category">Precision Point</div>
+          <div class="product-name">0.5ml Syringes</div>
+          <div class="product-sku">EQUIP #N-050</div>
+          <div class="product-desc">0.5ml insulin-style syringes. Pack of 10. For precision low-volume dosing.</div>
           <div class="product-footer">
             <span class="product-price">$8</span>
-            <div class="tag-group"><span class="tag purple">10-pack</span><span class="tag blue">1.0ml</span></div>
+            <div class="tag-group"><span class="tag purple">10-pack</span><span class="tag blue">0.5ml</span></div>
           </div>
         </div>
       </div>
@@ -751,20 +805,26 @@
             <line x1="78" y1="58" x2="78" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
             <line x1="93" y1="58" x2="93" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
             <line x1="108" y1="58" x2="108" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-            <text x="100" y="95" text-anchor="middle" fill="rgba(240,234,248,0.6)" font-family="monospace" font-size="8">EQUIP #N-050 · 0.5ml</text>
+            <text x="100" y="95" text-anchor="middle" fill="rgba(240,234,248,0.6)" font-family="monospace" font-size="8">EQUIP #N-100 · 1ml</text>
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">Precision Point / Equipment</div>
-          <div class="product-name">0.5ml Syringes</div>
-          <div class="product-sku">EQUIP #N-050</div>
-          <div class="product-desc">0.5ml / 50-unit insulin-style syringes. Pack of 10. Precision dosing for smaller volume protocols.</div>
+          <div class="product-category">Precision Point</div>
+          <div class="product-name">1ml Syringes</div>
+          <div class="product-sku">EQUIP #N-100</div>
+          <div class="product-desc">1ml syringes. Pack of 10. For standard volume protocols.</div>
           <div class="product-footer">
             <span class="product-price">$8</span>
-            <div class="tag-group"><span class="tag purple">10-pack</span><span class="tag blue">0.5ml</span></div>
+            <div class="tag-group"><span class="tag purple">10-pack</span><span class="tag blue">1ml</span></div>
           </div>
         </div>
       </div>
+
+    </div>
+
+    <!-- SQUEAKY CLEAN -->
+    <div class="cat-header reveal" style="font-size:0.72rem; font-family:'DM Mono',monospace; font-weight:600; color:var(--blue-light); padding-top:0; padding-bottom:0.75rem; margin-top:-0.5rem;">The Squeaky Clean — Prep Pads</div>
+    <div class="product-grid">
 
       <div class="product-card reveal">
         <div class="product-image-wrap">
@@ -778,10 +838,10 @@
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">The Squeaky Clean / Equipment</div>
+          <div class="product-category">The Squeaky Clean</div>
           <div class="product-name">Alcohol Prep Pads</div>
-          <div class="product-sku">EQUIP #AP-010</div>
-          <div class="product-desc">Sterile 70% isopropyl alcohol prep pads. 10-pack, individually wrapped. Standard lab hygiene supply.</div>
+          <div class="product-sku">EQUIP #AP-001</div>
+          <div class="product-desc">Sterile 70% isopropyl alcohol prep pads. 10-pack, individually wrapped.</div>
           <div class="product-footer">
             <span class="product-price">$3</span>
             <div class="tag-group"><span class="tag blue">10-pack</span><span class="tag">70% IPA</span></div>
@@ -789,15 +849,10 @@
         </div>
       </div>
 
-      <div class="coming-soon-card reveal">
-        <div class="cs-icon">⚗️</div>
-        <p>Additional Equipment &amp; Supplies<br/>Coming Soon</p>
-      </div>
-
     </div>
 
-    <!-- PUP PACKAGES -->
-    <div class="cat-header reveal">🛍️ &nbsp;Professor Corgi's Pup Packages</div>
+    <!-- ═══ PUP PACKAGES ═══ -->
+    <div class="cat-header reveal" style="margin-top:1.5rem;">🐾 &nbsp;Pup Packages — Starter Bundles</div>
     <div class="product-grid">
 
       <div class="product-card reveal">
@@ -812,12 +867,12 @@
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">Bundle</div>
+          <div class="product-category">Pup Package</div>
           <div class="product-name">New Pup Pack</div>
-          <div class="product-sku">SKU: New pup</div>
-          <div class="product-desc">Everything a new researcher needs. Includes: 1x BAC Water 3ml, 1x 0.5ml syringe 10-pack, 20x alcohol prep pads.</div>
+          <div class="product-sku">KIT #NP-001</div>
+          <div class="product-desc">Everything a new researcher needs. Includes: BAC Water 3ml + 0.5ml syringes (x10) + 20x alcohol prep pads.</div>
           <div class="product-footer">
-            <span class="product-price">$10</span>
+            <span class="product-price">$14</span>
             <div class="tag-group"><span class="tag pink">Bundle</span><span class="tag">Starter Kit</span></div>
           </div>
         </div>
@@ -836,12 +891,12 @@
           </svg>
         </div>
         <div class="product-body">
-          <div class="product-category">Bundle</div>
+          <div class="product-category">Pup Package</div>
           <div class="product-name">Pro Pup Pack</div>
-          <div class="product-sku">SKU: Pro pack</div>
-          <div class="product-desc">The full pro setup. Includes: 1x BAC Water 10ml, 1x 1.0ml syringe 10-pack, 20x alcohol prep pads.</div>
+          <div class="product-sku">KIT #PP-001</div>
+          <div class="product-desc">The full pro setup. Includes: BAC Water 10ml + 1ml syringes (x10) + 20x alcohol prep pads.</div>
           <div class="product-footer">
-            <span class="product-price">$15</span>
+            <span class="product-price">$22</span>
             <div class="tag-group"><span class="tag pink">Bundle</span><span class="tag">Sold Out</span></div>
           </div>
         </div>
@@ -851,12 +906,11 @@
 
     <div class="order-cta-box reveal">
       <h3>Ready to submit a request?</h3>
-      <p>Orders reviewed Monday–Friday, 10am–7pm CST. Shipping $10 flat — free on orders $120+.</p>
+      <p>Orders reviewed Monday–Friday, 10am–7pm CST. Shipping $10 flat — free on orders $150+.</p>
       <a href="#order" class="btn-primary">🚀 Submit Order Request</a>
     </div>
   </div>
 </section>
-
 <!-- ORDER -->
 <section id="order">
   <div class="container">
@@ -872,7 +926,7 @@
             <span>Full payment instructions included in your order confirmation email only</span>
           </div>
         </div>
-        <div class="order-detail"><span class="icon">📦</span><div><strong>Shipping</strong><span>$10 flat via UPS. <strong style="color:var(--purple-light)">Free shipping on orders $120+.</strong> Insurance available on request.</span></div></div>
+        <div class="order-detail"><span class="icon">📦</span><div><strong>Shipping</strong><span>$10 flat rate. <strong style="color:var(--purple-light)">Free shipping on orders $150+.</strong> Insurance available on request.</span></div></div>
         <div class="order-detail"><span class="icon">💸</span><div><strong>Payment Instructions</strong><span>Complete payment details — including method, handle, and memo rules — will be sent in your order confirmation email. Do not send payment until you receive your invoice.</span></div></div>
         <div class="order-detail"><span class="icon">📅</span><div><strong>Lab Hours</strong><span>Mon–Fri, 10am–7pm CST. Orders outside hours reviewed next business day.</span></div></div>
         <div class="order-detail"><span class="icon">📧</span><div><strong>Large Orders</strong><span>Need more than listed? Email <a href="mailto:ProfessorCorgisLab@gmail.com" style="color:var(--purple-light)">ProfessorCorgisLab@gmail.com</a> to discuss availability and pricing.</span></div></div>
@@ -927,68 +981,101 @@
           <!-- PRODUCT SELECTIONS -->
           <span class="form-section-label" style="margin-top:1.5rem;">// Select Your Samples</span>
 
+          <!-- ── EXPERIMENT FILES ── -->
+          <div class="form-cat-header" style="font-size:0.8rem; color:var(--purple-light);">🧪 &nbsp;The Experiment Files — Peptides</div>
+
           <!-- TWO PAWS PROTOCOL -->
-          <div class="form-cat-header">🧬 &nbsp;Two Paws Protocol — GLP-2 Tirzepatide (Tirzz)</div>
+          <div class="form-cat-header" style="font-size:0.68rem; margin-top:0; padding-top:0; color:var(--blue-light);">Two Paws Protocol — Tirzepatide</div>
           <div class="product-select-grid">
             <label class="product-select-item">
-              <input type="checkbox" name="products" value="Tirzz 20mg | Sample #T-020 — $60" />
-              <div class="psi-info"><div class="psi-name">Tirzz 20mg</div><div class="psi-sku">Sample #T-020</div></div>
+              <input type="checkbox" name="products" value="Tirzepatide 20mg | Sample #T-020 — $60" />
+              <div class="psi-info"><div class="psi-name">Tirzepatide 20mg</div><div class="psi-sku">Sample #T-020</div></div>
               <div class="psi-price">$60</div>
             </label>
             <label class="product-select-item">
-              <input type="checkbox" name="products" value="Tirzz 30mg | Sample #T-030 — $70" />
-              <div class="psi-info"><div class="psi-name">Tirzz 30mg</div><div class="psi-sku">Sample #T-030</div></div>
+              <input type="checkbox" name="products" value="Tirzepatide 30mg | Sample #T-030 — $70" />
+              <div class="psi-info"><div class="psi-name">Tirzepatide 30mg</div><div class="psi-sku">Sample #T-030</div></div>
               <div class="psi-price">$70</div>
             </label>
             <label class="product-select-item sold-out-item">
-              <input type="checkbox" name="products" value="Tirzz 40mg | Sample #T-040 — $85 [SOLD OUT]" disabled />
-              <div class="psi-info"><div class="psi-name">Tirzz 40mg</div><div class="psi-sku">Sample #T-040</div></div>
+              <input type="checkbox" name="products" value="Tirzepatide 40mg | Sample #T-040 — $85 [SOLD OUT]" disabled />
+              <div class="psi-info"><div class="psi-name">Tirzepatide 40mg</div><div class="psi-sku">Sample #T-040</div></div>
               <div class="psi-price">$85</div>
               <span class="psi-sold-out-badge">Sold Out</span>
             </label>
             <label class="product-select-item sold-out-item">
-              <input type="checkbox" name="products" value="Tirzz 60mg | Sample #T0-60 — $110 [SOLD OUT]" disabled />
-              <div class="psi-info"><div class="psi-name">Tirzz 60mg</div><div class="psi-sku">Sample #T0-60</div></div>
-              <div class="psi-price">$110</div>
+              <input type="checkbox" name="products" value="Tirzepatide 60mg | Sample #T-060 — $120 [SOLD OUT]" disabled />
+              <div class="psi-info"><div class="psi-name">Tirzepatide 60mg</div><div class="psi-sku">Sample #T-060</div></div>
+              <div class="psi-price">$120</div>
               <span class="psi-sold-out-badge">Sold Out</span>
             </label>
           </div>
           <div class="form-group" style="margin-top:0.6rem;">
             <div class="product-qty-wrap">
-              <label>Tirzz Qty:</label>
+              <label>Tirzepatide Qty:</label>
               <input class="qty-input" type="number" name="qty_tirzz" min="1" placeholder="1" />
             </div>
           </div>
 
           <!-- THE TRIFECTA -->
-          <div class="form-cat-header">🔬 &nbsp;The Trifecta — GLP-3 Retatrutide (Retaa)</div>
+          <div class="form-cat-header" style="font-size:0.68rem; color:var(--pink-light);">The Trifecta — Retatrutide</div>
           <div class="product-select-grid">
             <label class="product-select-item">
-              <input type="checkbox" name="products" value="Retaa 10mg | Sample #R-010 — $75" />
-              <div class="psi-info"><div class="psi-name">Retaa 10mg</div><div class="psi-sku">Sample #R-010</div></div>
-              <div class="psi-price">$75</div>
+              <input type="checkbox" name="products" value="Retatrutide 10mg | Sample #R-010 — $70" />
+              <div class="psi-info"><div class="psi-name">Retatrutide 10mg</div><div class="psi-sku">Sample #R-010</div></div>
+              <div class="psi-price">$70</div>
             </label>
             <label class="product-select-item">
-              <input type="checkbox" name="products" value="Retaa 20mg | Sample #R-020 — $90" />
-              <div class="psi-info"><div class="psi-name">Retaa 20mg</div><div class="psi-sku">Sample #R-020</div></div>
-              <div class="psi-price">$90</div>
+              <input type="checkbox" name="products" value="Retatrutide 20mg | Sample #R-020 — $95" />
+              <div class="psi-info"><div class="psi-name">Retatrutide 20mg</div><div class="psi-sku">Sample #R-020</div></div>
+              <div class="psi-price">$95</div>
             </label>
             <label class="product-select-item sold-out-item">
-              <input type="checkbox" name="products" value="Retaa 30mg | Sample #R-030 — $125 [SOLD OUT]" disabled />
-              <div class="psi-info"><div class="psi-name">Retaa 30mg</div><div class="psi-sku">Sample #R-030</div></div>
-              <div class="psi-price">$125</div>
+              <input type="checkbox" name="products" value="Retatrutide 30mg | Sample #R-030 — $120 [SOLD OUT]" disabled />
+              <div class="psi-info"><div class="psi-name">Retatrutide 30mg</div><div class="psi-sku">Sample #R-030</div></div>
+              <div class="psi-price">$120</div>
               <span class="psi-sold-out-badge">Sold Out</span>
             </label>
           </div>
           <div class="form-group" style="margin-top:0.6rem;">
             <div class="product-qty-wrap">
-              <label>Retaa Qty:</label>
+              <label>Retatrutide Qty:</label>
               <input class="qty-input" type="number" name="qty_retaa" min="1" placeholder="1" />
             </div>
           </div>
 
+          <!-- THE SPARK SEQUENCE -->
+          <div class="form-cat-header" style="font-size:0.68rem; color:var(--blue-light);">The Spark Sequence — MOTS-C</div>
+          <div class="product-select-grid">
+            <label class="product-select-item">
+              <input type="checkbox" name="products" value="MOTS-C 10mg | Sample #MS-010 — $45" />
+              <div class="psi-info"><div class="psi-name">MOTS-C 10mg</div><div class="psi-sku">Sample #MS-010</div></div>
+              <div class="psi-price">$45</div>
+            </label>
+          </div>
+          <div class="form-group" style="margin-top:0.6rem;">
+            <div class="product-qty-wrap">
+              <label>MOTS-C Qty:</label>
+              <input class="qty-input" type="number" name="qty_motsc" min="1" placeholder="1" />
+            </div>
+          </div>
+
+          <!-- THE VOLTAGE VIAL -->
+          <div class="form-cat-header" style="font-size:0.68rem; color:var(--text-muted);">The Voltage Vial — B-12</div>
+          <div class="product-select-grid">
+            <label class="product-select-item sold-out-item">
+              <input type="checkbox" name="products" value="B-12 10mg Lyophilized | Sample #B12-010 — $15 [SOLD OUT]" disabled />
+              <div class="psi-info"><div class="psi-name">B-12 10mg Lyophilized</div><div class="psi-sku">Sample #B12-010</div></div>
+              <div class="psi-price">$15</div>
+              <span class="psi-sold-out-badge">Sold Out</span>
+            </label>
+          </div>
+
+          <!-- ── SUPPLY LINE ── -->
+          <div class="form-cat-header" style="font-size:0.8rem; color:var(--purple-light); margin-top:1rem;">🔧 &nbsp;The Supply Line — Equipment &amp; Supplies</div>
+
           <!-- DILUTION SOLUTION -->
-          <div class="form-cat-header">💧 &nbsp;The Dilution Solution — BAC Water</div>
+          <div class="form-cat-header" style="font-size:0.68rem; color:var(--blue-light); margin-top:0; padding-top:0;">The Dilution Solution — BAC Water</div>
           <div class="product-select-grid">
             <label class="product-select-item">
               <input type="checkbox" name="products" value="BAC Water 3ml | Sample #BW-003 — $8" />
@@ -1010,16 +1097,16 @@
           </div>
 
           <!-- PRECISION POINT -->
-          <div class="form-cat-header">🩺 &nbsp;Precision Point — Syringes ($8 / 10-pack)</div>
+          <div class="form-cat-header" style="font-size:0.68rem; color:var(--blue-light);">Precision Point — Syringes ($8 / 10-pack)</div>
           <div class="product-select-grid">
             <label class="product-select-item">
-              <input type="checkbox" name="products" value="1.0ml Syringes 10-pack | EQUIP #N-100 — $8" />
-              <div class="psi-info"><div class="psi-name">1.0ml Syringes</div><div class="psi-sku">EQUIP #N-100 · 10-pack</div></div>
+              <input type="checkbox" name="products" value="0.5ml Syringes x10 | EQUIP #N-050 — $8" />
+              <div class="psi-info"><div class="psi-name">0.5ml Syringes</div><div class="psi-sku">EQUIP #N-050 · 10-pack</div></div>
               <div class="psi-price">$8</div>
             </label>
             <label class="product-select-item">
-              <input type="checkbox" name="products" value="0.5ml Syringes 10-pack | EQUIP #N-050 — $8" />
-              <div class="psi-info"><div class="psi-name">0.5ml Syringes</div><div class="psi-sku">EQUIP #N-050 · 10-pack</div></div>
+              <input type="checkbox" name="products" value="1ml Syringes x10 | EQUIP #N-100 — $8" />
+              <div class="psi-info"><div class="psi-name">1ml Syringes</div><div class="psi-sku">EQUIP #N-100 · 10-pack</div></div>
               <div class="psi-price">$8</div>
             </label>
           </div>
@@ -1031,11 +1118,11 @@
           </div>
 
           <!-- SQUEAKY CLEAN -->
-          <div class="form-cat-header">🧼 &nbsp;The Squeaky Clean — Alcohol Prep Pads</div>
+          <div class="form-cat-header" style="font-size:0.68rem; color:var(--blue-light);">The Squeaky Clean — Alcohol Prep Pads</div>
           <div class="product-select-grid">
             <label class="product-select-item">
-              <input type="checkbox" name="products" value="Alcohol Prep Pads 10-pack | EQUIP #AP-010 — $3" />
-              <div class="psi-info"><div class="psi-name">Alcohol Prep Pads 10-pack</div><div class="psi-sku">EQUIP #AP-010</div></div>
+              <input type="checkbox" name="products" value="Alcohol Prep Pads x10 | EQUIP #AP-001 — $3" />
+              <div class="psi-info"><div class="psi-name">Alcohol Prep Pads x10</div><div class="psi-sku">EQUIP #AP-001</div></div>
               <div class="psi-price">$3</div>
             </label>
           </div>
@@ -1047,25 +1134,33 @@
           </div>
 
           <!-- PUP PACKAGES -->
-          <div class="form-cat-header">🐾 &nbsp;Pup Packages — Starter Bundles</div>
+          <div class="form-cat-header" style="font-size:0.8rem; color:var(--pink-light); margin-top:1rem;">🐾 &nbsp;Pup Packages — Starter Bundles</div>
           <div class="product-select-grid">
             <label class="product-select-item">
-              <input type="checkbox" name="products" value="New Pup Pack — $10 (BAC Water 3ml + 0.5ml syringes 10-pack + 20x prep pads)" />
+              <input type="checkbox" name="products" value="New Pup Pack | KIT #NP-001 — $14 (BAC 3ml + 0.5ml syringes x10 + 20x pads)" />
               <div class="psi-info">
                 <div class="psi-name">New Pup Pack</div>
-                <div class="psi-sku">SKU: New pup · Includes: BAC 3ml, 0.5ml syringes, 20x pads</div>
+                <div class="psi-sku">KIT #NP-001 · BAC 3ml + 0.5ml syringes + 20x pads</div>
               </div>
-              <div class="psi-price">$10</div>
+              <div class="psi-price">$14</div>
             </label>
             <label class="product-select-item sold-out-item">
-              <input type="checkbox" name="products" value="Pro Pup Pack — $15 [SOLD OUT]" disabled />
+              <input type="checkbox" name="products" value="Pro Pup Pack | KIT #PP-001 — $22 [SOLD OUT]" disabled />
               <div class="psi-info">
                 <div class="psi-name">Pro Pup Pack</div>
-                <div class="psi-sku">SKU: Pro pack · Includes: BAC 10ml, 1.0ml syringes, 20x pads</div>
+                <div class="psi-sku">KIT #PP-001 · BAC 10ml + 1ml syringes + 20x pads</div>
               </div>
-              <div class="psi-price">$15</div>
+              <div class="psi-price">$22</div>
               <span class="psi-sold-out-badge">Sold Out</span>
             </label>
+          </div>
+
+          <!-- REFERRAL CODE -->
+          <div class="form-group" style="margin-top:1.5rem;">
+            <label>Referral Code
+              <span class="sublabel">Optional — enter a referral code if you have one</span>
+            </label>
+            <input class="form-input" type="text" name="referral_code" placeholder="Optional" />
           </div>
 
           <!-- ORDER NOTES -->
@@ -1078,11 +1173,11 @@
 
           <!-- PAYMENT INFO -->
           <div class="payment-info-box">
-            <div class="pi-title">🔒 Payment Information</div>
+            <div class="pi-title">💚 Payment — CashApp Only</div>
             <p>
-              Payment details are <strong>not listed publicly</strong> on this site.<br/>
-              After your order is received and reviewed, you will be sent a <strong>secure order invoice via email</strong> containing full payment instructions, confirmation of your items, and your total.<br/><br/>
-              📦 Shipping: <strong>$10 flat via UPS.</strong> Free on orders <strong>$120+.</strong><br/>
+              <strong>Only CashApp is accepted at this time.</strong><br/>
+              Complete CashApp payment details — handle, amount, and memo instructions — will be included in your <strong>secure order invoice sent via email</strong> after your request is received and reviewed.<br/><br/>
+              📦 Shipping: <strong>$10 flat.</strong> Free on orders <strong>$150+.</strong><br/>
               🛡️ Insurance available on request after order is received.
             </p>
           </div>
@@ -1273,80 +1368,70 @@
   (function() {
     const container = document.getElementById('molecules');
     const colors = [
-      { stroke: '#A855F7', glow: 'rgba(168,85,247,0.6)' },  // purple neon
-      { stroke: '#34D399', glow: 'rgba(52,211,153,0.6)' },  // green neon
-      { stroke: '#F472B6', glow: 'rgba(244,114,182,0.6)' }, // pink neon
-      { stroke: '#C084FC', glow: 'rgba(192,132,252,0.5)' }, // light purple
-      { stroke: '#6EE7B7', glow: 'rgba(110,231,183,0.5)' }, // mint green
+      { stroke: '#B06EFF', glow: 'rgba(176,110,255,0.9)',  fill: 'rgba(176,110,255,0.15)' },
+      { stroke: '#00FF9C', glow: 'rgba(0,255,156,0.9)',    fill: 'rgba(0,255,156,0.12)'  },
+      { stroke: '#FF5FAF', glow: 'rgba(255,95,175,0.9)',   fill: 'rgba(255,95,175,0.13)' },
+      { stroke: '#78DDFF', glow: 'rgba(120,221,255,0.85)', fill: 'rgba(120,221,255,0.1)' },
+      { stroke: '#D87FFF', glow: 'rgba(216,127,255,0.85)', fill: 'rgba(216,127,255,0.1)' },
     ];
 
-    // Draw a benzene-ring style molecule or a simple chain
     function makeMolSVG(color, size) {
       const s = size;
-      const r = s * 0.32;
+      const r = s * 0.33;
       const cx = s / 2, cy = s / 2;
-      const type = Math.random() > 0.5 ? 'ring' : 'chain';
-      const filterId = 'gf' + Math.random().toString(36).slice(2,7);
+      const type = Math.random() > 0.45 ? 'ring' : 'chain';
+      const fid = 'gf' + Math.random().toString(36).slice(2,8);
 
       let shapes = '';
       if (type === 'ring') {
-        // Hexagonal ring (benzene-like)
         const pts = [];
         for (let i = 0; i < 6; i++) {
           const a = (Math.PI / 3) * i - Math.PI / 6;
           pts.push([cx + r * Math.cos(a), cy + r * Math.sin(a)]);
         }
-        // Bonds
         for (let i = 0; i < 6; i++) {
           const n = (i + 1) % 6;
-          shapes += `<line x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${pts[n][0]}" y2="${pts[n][1]}" stroke="${color.stroke}" stroke-width="1.5" filter="url(#${filterId})"/>`;
+          shapes += `<line x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${pts[n][0]}" y2="${pts[n][1]}" stroke="${color.stroke}" stroke-width="2.5" filter="url(#${fid})"/>`;
         }
-        // Atoms at vertices
         pts.forEach(p => {
-          shapes += `<circle cx="${p[0]}" cy="${p[1]}" r="${s*0.045}" fill="${color.stroke}" filter="url(#${filterId})" opacity="0.9"/>`;
+          shapes += `<circle cx="${p[0]}" cy="${p[1]}" r="${s*0.06}" fill="${color.stroke}" filter="url(#${fid})"/>`;
         });
-        // Center double ring
-        shapes += `<circle cx="${cx}" cy="${cy}" r="${r*0.55}" fill="none" stroke="${color.stroke}" stroke-width="0.8" opacity="0.4"/>`;
-        // Side groups
-        const sideIdx = [0, 2, 4];
-        sideIdx.forEach(i => {
+        shapes += `<circle cx="${cx}" cy="${cy}" r="${r*0.52}" fill="${color.fill}" stroke="${color.stroke}" stroke-width="1" opacity="0.5"/>`;
+        [0,2,4].forEach(i => {
           const a = (Math.PI / 3) * i - Math.PI / 6;
-          const ox = pts[i][0] + r * 0.55 * Math.cos(a);
-          const oy = pts[i][1] + r * 0.55 * Math.sin(a);
-          shapes += `<line x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${ox}" y2="${oy}" stroke="${color.stroke}" stroke-width="1.2" opacity="0.6" filter="url(#${filterId})"/>`;
-          shapes += `<circle cx="${ox}" cy="${oy}" r="${s*0.035}" fill="${color.stroke}" opacity="0.7"/>`;
+          const ox = pts[i][0] + r * 0.58 * Math.cos(a);
+          const oy = pts[i][1] + r * 0.58 * Math.sin(a);
+          shapes += `<line x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${ox}" y2="${oy}" stroke="${color.stroke}" stroke-width="2" opacity="0.8" filter="url(#${fid})"/>`;
+          shapes += `<circle cx="${ox}" cy="${oy}" r="${s*0.045}" fill="${color.stroke}" opacity="0.9"/>`;
         });
       } else {
-        // Chain molecule
         const nodes = 4 + Math.floor(Math.random() * 3);
         const pts = [];
         for (let i = 0; i < nodes; i++) {
           const angle = (i % 2 === 0 ? 0.5 : -0.5);
           pts.push([
             cx - r * 1.1 + (i / (nodes - 1)) * r * 2.2,
-            cy + angle * r * 0.6
+            cy + angle * r * 0.65
           ]);
         }
         for (let i = 0; i < pts.length - 1; i++) {
-          shapes += `<line x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${pts[i+1][0]}" y2="${pts[i+1][1]}" stroke="${color.stroke}" stroke-width="1.5" filter="url(#${filterId})"/>`;
+          shapes += `<line x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${pts[i+1][0]}" y2="${pts[i+1][1]}" stroke="${color.stroke}" stroke-width="2.5" filter="url(#${fid})"/>`;
         }
         pts.forEach((p, i) => {
           const isEnd = i === 0 || i === pts.length - 1;
-          shapes += `<circle cx="${p[0]}" cy="${p[1]}" r="${s * (isEnd ? 0.055 : 0.045)}" fill="${color.stroke}" opacity="${isEnd ? 1 : 0.8}" filter="url(#${filterId})"/>`;
-          // Small branches on middle nodes
-          if (!isEnd && Math.random() > 0.4) {
-            const bx = p[0];
-            const by = p[1] - r * 0.5;
-            shapes += `<line x1="${p[0]}" y1="${p[1]}" x2="${bx}" y2="${by}" stroke="${color.stroke}" stroke-width="1" opacity="0.5"/>`;
-            shapes += `<circle cx="${bx}" cy="${by}" r="${s*0.03}" fill="${color.stroke}" opacity="0.6"/>`;
+          shapes += `<circle cx="${p[0]}" cy="${p[1]}" r="${s*(isEnd?0.07:0.055)}" fill="${color.stroke}" filter="url(#${fid})"/>`;
+          if (!isEnd && Math.random() > 0.35) {
+            const bx = p[0]; const by = p[1] - r * 0.55;
+            shapes += `<line x1="${p[0]}" y1="${p[1]}" x2="${bx}" y2="${by}" stroke="${color.stroke}" stroke-width="1.8" opacity="0.8"/>`;
+            shapes += `<circle cx="${bx}" cy="${by}" r="${s*0.04}" fill="${color.stroke}" opacity="0.9"/>`;
           }
         });
       }
 
       return `<svg xmlns="http://www.w3.org/2000/svg" width="${s}" height="${s}" viewBox="0 0 ${s} ${s}">
         <defs>
-          <filter id="${filterId}" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+          <filter id="${fid}" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
             <feFlood flood-color="${color.glow}" result="color"/>
             <feComposite in="color" in2="blur" operator="in" result="glow"/>
             <feMerge><feMergeNode in="glow"/><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -1358,25 +1443,28 @@
 
     function spawnMol() {
       const color = colors[Math.floor(Math.random() * colors.length)];
-      const size = 40 + Math.random() * 55;
+      const size = 55 + Math.random() * 70;
       const el = document.createElement('div');
       el.className = 'mol';
       el.innerHTML = makeMolSVG(color, size);
-      el.style.left = (Math.random() * 96) + 'vw';
-      el.style.bottom = '-120px';
-      const duration = 18 + Math.random() * 22;
-      const delay = Math.random() * 8;
+      el.style.left = (Math.random() * 95) + 'vw';
+      el.style.bottom = '-140px';
+      // Random starting vertical offset so they appear throughout page, not just bottom
+      const startOffset = Math.random() * 80;
+      el.style.bottom = `-${140 + startOffset * 10}px`;
+      const duration = 14 + Math.random() * 16;
+      const delay = Math.random() * 4;
       el.style.animation = `molFloat ${duration}s ${delay}s linear infinite`;
-      el.style.opacity = 0;
       container.appendChild(el);
-      // Remove and respawn after a few cycles to keep DOM lean
-      setTimeout(() => { if (el.parentNode) el.parentNode.removeChild(el); spawnMol(); },
-        (duration + delay) * 2200);
+      setTimeout(() => {
+        if (el.parentNode) el.parentNode.removeChild(el);
+        spawnMol();
+      }, (duration + delay) * 1800);
     }
 
-    // Spawn initial batch staggered
-    for (let i = 0; i < 18; i++) {
-      setTimeout(spawnMol, i * 600);
+    // Spawn 35 molecules staggered — more frequent, cover full page
+    for (let i = 0; i < 35; i++) {
+      setTimeout(spawnMol, i * 280);
     }
   })();
 
